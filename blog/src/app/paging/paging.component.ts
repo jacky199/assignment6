@@ -11,14 +11,12 @@ export class PagingComponent implements OnInit {
 
   @Output() newPage = new EventEmitter();
 
-  // Previous page
   btnPrevPage() {
     if (this.page > 1) {
       this.newPage.emit(this.page - 1);
     }
   }
-  
-  // Next page
+
   btnNextPage() {
     this.newPage.emit(this.page + 1);
   }

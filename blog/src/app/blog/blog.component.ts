@@ -20,7 +20,6 @@ export class BlogComponent implements OnInit, OnDestroy {
 
   constructor(private data: PostService, private route: ActivatedRoute) { }
 
-  // Get page
   getPage(num) {
     this.querySub = this.data.getPosts(num, this.tag, this.category).subscribe(data => {
       if (data.length > 0) {

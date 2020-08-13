@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "assignment4": {
@@ -10,7 +10,6 @@
           "skipTests": true
         },
         "@schematics/angular:component": {
-          
           "skipTests": true
         },
         "@schematics/angular:directive": {
@@ -145,6 +144,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "assignment4"
+    }
+  },
+  "defaultProject": "assignment4",
+  "cli": {
+    "analytics": false
+  }
 }

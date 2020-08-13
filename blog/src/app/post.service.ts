@@ -11,7 +11,6 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  // Get all posts
   getAllPosts(): Observable<BlogPost[]> {
     const perPage = Number.MAX_SAFE_INTEGER.toString();
 
@@ -20,10 +19,9 @@ export class PostService {
       perPage: perPage
     }
 
-    return this.http.get<BlogPost[]>(`https://arnin-blogapi.herokuapp.com/api/posts`, { params });
+    return this.http.get<BlogPost[]>(`https://peaceful-basin-71535.herokuapp.com/api/posts`, { params });
   }
 
-  // Get posts per page
   getPosts(page, tag, category): Observable<BlogPost[]> {
     const perPage = 6;
     
@@ -40,37 +38,31 @@ export class PostService {
       params["category"] = category;
     }
 
-    return this.http.get<BlogPost[]>(`https://arnin-blogapi.herokuapp.com/api/posts`,{ params });
+    return this.http.get<BlogPost[]>(`https://peaceful-basin-71535.herokuapp.com/api/posts`,{ params });
   }
 
-  // Get post by id
   getPostByID(id): Observable<BlogPost> {
-    return this.http.get<BlogPost>(`https://arnin-blogapi.herokuapp.com/api/posts/${id}`);
+    return this.http.get<BlogPost>(`https://peaceful-basin-71535.herokuapp.com/api/posts/${id}`);
   }
 
-  // Create new post
   newPost(data: BlogPost): Observable<any> {
-    return this.http.post<any>(`https://arnin-blogapi.herokuapp.com/api/posts`, data);
+    return this.http.post<any>(`https://peaceful-basin-71535.herokuapp.com/api/posts`, data);
   }
 
-  // Update post
   updatePostById(id: string, data: BlogPost): Observable<any> {
-    return this.http.put<any>(`https://arnin-blogapi.herokuapp.com/api/posts/${id}`, data);
+    return this.http.put<any>(`https://peaceful-basin-71535.herokuapp.com/api/posts/${id}`, data);
   }
 
-  // Delete post
   deletePostById(id: string): Observable<any> {
-    return this.http.delete<any>(`https://arnin-blogapi.herokuapp.com/api/posts/${id}`);
+    return this.http.delete<any>(`https://peaceful-basin-71535.herokuapp.com/api/posts/${id}`);
   }
 
-  // Get categories
   getCategories(): Observable<any> {
-    return this.http.get<any>(`https://arnin-blogapi.herokuapp.com/api/categories`);
+    return this.http.get<any>(`https://peaceful-basin-71535.herokuapp.com/api/categories`);
   }
 
-  // Get tags
   getTags(): Observable<string[]> {
-    return this.http.get<string[]>(`https://arnin-blogapi.herokuapp.com/api/tags`);
+    return this.http.get<string[]>(`https://peaceful-basin-71535.herokuapp.com/api/tags`);
   }
 
 }

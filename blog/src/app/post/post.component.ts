@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-// Import Mock Data
 import blogData from '../../blogData.json';
 import { BlogPost } from '../../BlogPost'
 
